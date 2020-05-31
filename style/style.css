@@ -34,6 +34,8 @@ div{
   height: 400px;
   background-color: #000;
   grid-area: a2;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .InputsValuesRadios {
@@ -89,7 +91,7 @@ textarea{
   left: 0px;
 }
 
-button{
+.copy{
   position: absolute;
   height: 50px;
   width: 50px;
@@ -100,4 +102,15 @@ button{
   border: none;
   outline: none;
   cursor: pointer;
+}
+.copied{
+  position: absolute;
+  height: 50px;
+  width: 80px;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: rgba(23, 212, 23, 0.404);
+  border-radius: 20px;
 }

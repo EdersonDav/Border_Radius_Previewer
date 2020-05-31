@@ -61,14 +61,22 @@ function setRadius() {
 
 //Add string css in text-area
 function addStringInTextArea() {
-  txtAreaValueCSS.innerText = `background-color: ${color};\n
+  txtAreaValueCSS.innerText = `background-color: ${color};
                               border-radius: ${topLef}% ${topRig}% ${botRig}% ${botLef}%;`
 }
 
-function copy() {
-  let copyTxt = document.querySelector("#valueCSS")
-  copyTxt.select()
-  copyTxt.setSelectionRange(0, 99999)
+function copy(e) {
+  let copyTxt = document.querySelector("#valueCSS");
+  copyTxt.select();
+  copyTxt.setSelectionRange(0, 99999);
 
-  document.execCommand("copy")
+  document.execCommand("copy");
+
+  e.classList = "copied";
+  e.innerText = "Copied!"
+
+  setTimeout(() => {
+    e.classList = "copy";
+    e.innerText = ""
+  }, 800);
 }
